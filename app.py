@@ -13,5 +13,11 @@ def menu():
     return render_template('main-menu.html')
 
 
+@app.route('/mod-usuario')
+def mod_usuario():
+    return render_template('modificarUsuario.html')
+
+
+
 if __name__ == '__main__':
     app.run(debug=True)
