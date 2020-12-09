@@ -19,16 +19,15 @@
             <div class="form">
                 <form class="password-form invisible">
                     <p class="informacion"> Hola, para recuperar tu contraseña ingresa tu correo electrónico y pulsa en
-                        el
-                        botón RECUPERAR CONTRASEÑA. Solo tienes que seguir las instruciones que te darémos en el correo.
+                        el botón RECUPERAR CONTRASEÑA. Solo tienes que seguir las instruciones que te darémos en el correo.
                     </p>
                     <input type="text" placeholder="Correo electrónico" />
                     <button>Recuperar contraseña</button>
                     <p class="message">¿Ya tienes una cuenta? <a href="#" onclick="toggle()">Ingresa ahora</a> </p>
                 </form>
                 <form class="login-form visible" id="inicio-sesion">
-                    <input type="text" placeholder="Usuario" />
-                    <input type="password" placeholder="Contraseña" />
+                    <input type="text" placeholder="Usuario" name="usuario" />
+                    <input type="password" placeholder="Contraseña" name="contraseña"/>
                     <button onclick="loginError()">Ingresar</button>
                     <p class="error-message invisible">Usuario o contraseña incorrectas</p>
                     <p class="message">¿Olvidaste tu contraseña?<a href="#" onclick="toggle()"> Recuperar</a></p>
