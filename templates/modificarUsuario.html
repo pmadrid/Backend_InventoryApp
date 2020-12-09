@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="esp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar Usuario</title>
+    <link href="../static/Resources/CSS/mystyle.css" rel="stylesheet" type="text/css">
+    <script src="../static/JS/script.js"></script>
+    
+
+
+</head>
+<body>
+    <header>
+        <div class="logedj">
+            <p class = "centradoj">
+                <img class = "logoj"  src = "./Images/usuario.png" width="50" height="50" >
+                <h2 class = "centradoj usuarioj" >Nombre usuario</h2>
+            </p>
+        </div>
+    </header>
+    <main class = "gest-usuariosj">
+    
+   <div class = "informacion-Usuarioj">
+        <header>
+            <h1 class = "titlePagej">Modificar Usuario</h1>
+        </header>
+        
+        <br /><br />
+            <label class = "labelj" for="username">Nombre:</label>
+            <input class = "inputj" id="username" type="text" name="username" >
+        
+    </div> 
+    
+    <div class = "informacion-Usuarioj">   
+    
+        <br /><br />
+        <label class = "labelj" for="email">Correo Electrónico:</label>
+        <input class = "inputj" type="email" id="email" name="user_email">
+    
+    </div>  
+    <div class = "informacion-Usuarioj">    
+        
+        <br /><br />
+        <label class = "labelj" for="password">Contraseña:</label>
+        <input class = "inputj espacioj" id="password" type="password" minlength="8" maxlength="10">
+         
+    </div> 
+    <div class = "bottonj">
+        <button role = "link" href="vistasGestionarUsuarios/CrearUsuario.html"  class="linea">Guardar Usuario</button>
+        <button type="submit" class="linea">Eliminar Usuario</button>
+        
+    </div> 
+    </main>
+    <footer>
+        <p class="informacionj">Misión TIC Grupo 2 - Subgrupo B</br> Todos los derechos reservados </p>
+    </footer>
+</body>
