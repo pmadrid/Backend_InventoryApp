@@ -29,7 +29,7 @@ CONTRASEÑASERVER = 'Maracuya1234'
 
 @app.route('/api')
 def api():
-    return jsonify({"message": "Hola, mundo!"})
+    return jsonify({"message": "¡Hola, mundo!"})
 
 
 @app.route('/articulos')
