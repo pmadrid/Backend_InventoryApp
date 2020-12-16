@@ -86,7 +86,7 @@ def login():  # ESta función
                     return redirect(url_for('usuario_aut'))
 
     except Exception as e:
-        print("Ocurrio un error cuando intentaste ingresar en login:", e)
+        print("Ocurrió un error cuando intentaste ingresar en login:", e)
         return render_template(LOGIN, titulo="Iniciar Sesión", form=formulario)
 
 
@@ -110,7 +110,7 @@ def recuperar():
         else:
             return render_template(LOGIN, titulo="Iniciar Sesión", form=formulario)
     except Exception as e:
-        print("Ocurrio un error cuando intentaste recuperar la contraseña", e)
+        print("Ocurrió un error cuando intentaste recuperar la contraseña", e)
         return render_template(LOGIN, titulo="Iniciar Sesión", form=formulario)
 
 
