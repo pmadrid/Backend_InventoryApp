@@ -6,15 +6,19 @@
     <link href="../static/Resources/CSS/mystyle.css" rel="stylesheet" type="text/css">
     <script src="../static/JS/script.js"></script>
 
-    <title></title>
+    <title>InventoryApp - Gestionar Usuarios</title>
 </head>
 <body>
     <header>
-        <div class="logedj">
+        <div class="logedj1">
+            <a href="{{ url_for('menu') }}"><button role = "link1"  class="boton1">Atras</button></a>
             <p class = "centradoj">
                 <img class = "logoj"  src = "../static/Images/usuario.png" width="50" height="50" >
                 <h2 class = "centradoj usuarioj" >Nombre usuario</h2>
             </p>
+            <div class="salir-posición">
+                <button class="salir">Salir</button>
+            </div>
         </div>
     </header>
     <main class = "gest-usuariosj">

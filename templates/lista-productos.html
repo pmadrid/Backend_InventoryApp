@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InventoryApp - Lista de productos</title>
+    <title>InventoryApp - Lista de Productos</title>
     <link href="../static/Resources/CSS/mystyle.css" rel="stylesheet" type="text/css">
     <script src="../static/JS/script.js"></script>
 </head>
 <body>
     <header>
         <div class="logedj1">
+            <a href="{{ url_for('menu') }}"><button role = "link1"  class="boton1">Atras</button></a>
             <p class = "centradoj">
                 <img class = "logoj"  src = "../static/Images/usuario.png" width="50" height="50" >
                 <h2 class = "centradoj usuarioj" >Nombre usuario</h2>
             </p>
+            <div class="salir-posición">
+                <button class="salir">Salir</button>
+            </div>
+
         </div>
     </header>
     <main>
@@ -33,7 +38,7 @@
                         <img src="../static/Images/croissant.jpg" alt="">
                     </div>
                     <div class="text">Descripción del producto</div>
-                    <button class="verMas">Ver más</button>
+                    <a href="{{ url_for('producto') }}"><button class="verMas">Ver más</button></a>
                 </div>
                 <!--Segundo producto-->
                 <div class="card">
@@ -41,10 +46,10 @@
                         Café
                     </div>
                     <div class="image">
-                        <img src="../static/Images/croissant.jpg" alt="">
+                        <img src="../static/Images/cafe.jpg" alt="">
                     </div>
                     <div class="text">Descripción del producto</div>
-                    <button class="verMas">Ver más</button>
+                    <a href="{{ url_for('producto') }}"><button class="verMas">Ver más</button></a>
                 </div>
                 <!--Tercer producto-->
                 <div class="card">
@@ -52,10 +57,10 @@
                         Arroz con leche
                     </div>
                     <div class="image">
-                        <img src="../static/Images/croissant.jpg" alt="">
+                        <img src="../static/Images/arrozconleche.jpg" alt="">
                     </div>
                     <div class="text">Descripción del producto</div>
-                    <button class="verMas">Ver más</button>
+                    <a href="{{ url_for('producto') }}"><button class="verMas">Ver más</button></a>
                 </div>
                 <!--Cuarto producto-->
                 <div class="card">
@@ -63,10 +68,10 @@
                         Té chai
                     </div>
                     <div class="image">
-                        <img src="../static/Images/croissant.jpg" alt="">
+                        <img src="../static/Images/techai.jpg" alt="">
                     </div>
                     <div class="text">Descripción del producto</div>
-                    <button class="verMas">Ver más</button>
+                    <a href="{{ url_for('producto') }}"><button class="verMas">Ver más</button></a>
                 </div>
                 <!--Quinto producto-->
                 <div class="card">
@@ -74,21 +79,21 @@
                         Empanadas argentinas
                     </div>
                     <div class="image">
-                        <img src="../static/Images/croissant.jpg" alt="">
+                        <img src="../static/Images/empanadasargentinas.jpg" alt="">
                     </div>
                     <div class="text">Descripción del producto</div>
-                    <button class="verMas">Ver más</button>
+                    <a href="{{ url_for('producto') }}"><button class="verMas">Ver más</button></a>
                 </div>
                 <!--Sexto producto-->
                 <div class="card">
                     <div class="title">
-                        Empanadas de iglesia
+                        Dedo de queso
                     </div>
                     <div class="image">
-                        <img src="../static/Images/croissant.jpg" alt="">
+                        <img src="../static/Images/dedoconqueso.jpg" alt="">
                     </div>
                     <div class="text">Descripción del producto</div>
-                    <button class="verMas">Ver más</button>
+                    <a href="{{ url_for('producto') }}"><button class="verMas">Ver más</button></a>
                 </div>
                 <!--Séptimo producto-->
                 <div class="card">
@@ -96,21 +101,21 @@
                         Pastel de pollo horneado
                     </div>
                     <div class="image">
-                        <img src="../static/Images/croissant.jpg" alt="">
+                        <img src="../static/Images/pastelpollo.jpg" alt="">
                     </div>
                     <div class="text">Descripción del producto</div>
-                    <button class="verMas">Ver más</button>
+                    <a href="{{ url_for('producto') }}"><button class="verMas">Ver más</button></a>
                 </div>
                 <!--Octavo producto-->
                 <div class="card">
                     <div class="title">
-                        Pasteles de jamón y queso
+                        Pandebono
                     </div>
                     <div class="image">
-                        <img src="../static/Images/croissant.jpg" alt="">
+                        <img src="../static/Images/pandebono.jpg" alt="">
                     </div>
                     <div class="text">Descripción del producto</div>
-                    <button class="verMas">Ver más</button>
+                    <a href="{{ url_for('producto') }}"><button class="verMas">Ver más</button></a>
                 </div>
                 <!--Noveno producto-->
                 <div class="card">
@@ -118,13 +123,13 @@
                         Pasteles hawaianos
                     </div>
                     <div class="image">
-                        <img src="../static/Images/croissant.jpg" alt="">
+                        <img src="../static/Images/pastelhawaiano.jpg" alt="">
                     </div>
                     <div class="text">Descripción del producto</div>
-                    <button class="verMas">Ver más</button>
+                    <a href="{{ url_for('producto') }}"><button class="verMas">Ver más</button></a>
                 </div>
             </section>
-        </section>       
+        </section>
     </main>
     <footer class="footer">
         <p>Misión TIC Grupo 2 - Subgrupo B™</br> Todos los derechos reservados</p>
