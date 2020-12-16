@@ -30,6 +30,7 @@ body::before{
 
 
 /*inicio*/
+
 /*Login-page*/
 
 .login-page {
@@ -73,8 +74,8 @@ body::before{
   padding: 15px;
   color: #FFFFFF;
   font-size: 1em;
-  -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 .form button:hover,.form button:active,.form button:focus {
@@ -488,7 +489,7 @@ header h1::before{
 
 .gest-usuariosj{
     background-color:  #f8d993; 
-    padding: 5xp ;
+    padding: 5px ;
     margin:auto;
 }
 
@@ -581,7 +582,6 @@ div.contenedor2 {
 .centradoF2{
     text-align:center;
     padding:10px;}
-    center:margin:16px 0;}
 
 .logoF2{
     padding-bottom: 1px ;
