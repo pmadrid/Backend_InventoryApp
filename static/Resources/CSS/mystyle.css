@@ -564,40 +564,17 @@ label{
 
 /*Usuario autenticado*/
 
-div.contenedor2 {
-    background-color:#F8D993;
-    padding:180px;
-    margin-top:7%;
-}
-.logedF2{
-    background: #1F9399;
-    height:  100px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: -1px;
-}
-
-
-
-.centradoF2{
-    text-align:center;
-    padding:10px;}
-
-.logoF2{
-    padding-bottom: 1px ;
-}
-.usuarioF2{
-    font-size: small;
-    margin-top: -35px ;
+.usu-aut{
+    background-color:  #f8d993;
+    padding: 2em ;
+    margin-top: 1% ;
 }
 
 .formF2{
-    position:fixed;
-    top:37%;
-    left:30%;
-    height:250px;
-    width:500px;
-    padding:60px;
+    position:center;
+    height:50%;
+    width:25%;
+    padding:2%;
     border-radius:8px;
     margin:auto;
     background-color:rgb(183, 236, 214);
@@ -605,8 +582,9 @@ div.contenedor2 {
 }
 
 .formF2 label{
-	width:250px;
-	font-weight:bold;
+	width:300px;
+    margin-bottom: 2%;
+	font-weight:bolder;
 	display:inline-block;
 }
 
@@ -615,9 +593,7 @@ div.contenedor2 {
 {
 	width:180px;
     padding:8px 8px;
-    margin-top:2px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: -1%;
 	border:1px solid #f6f6f6;
 	border-radius:3px;
 	background-color:#f6f6f6;
@@ -627,7 +603,7 @@ div.contenedor2 {
 .formF2 button[type="submit"]{
 	width:180px;
 	padding:6px 6px;
-    margin-top:2px;
+    margin-top: 1%;
     margin-left: auto;
     margin-right: auto;
 	border:1px solid rgb(7, 0, 0);
@@ -635,12 +611,22 @@ div.contenedor2 {
 	display:block;
 	color:#fff;
 	background-color:rgb(31, 147, 153);
+    text-transform: uppercase;
+    outline: 0;
+    font-size: 0.8em;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-.formF2 button[type="submit"]:hover{
-	cursor:pointer;
+.formF2 button:hover,.formF2 button:active,.formF2 button:focus {
+  background: var(--color-principal);
+  color: red;
 }
-
+.formF2 button:hover:before, .formF2 button:focus:before, .formF2 button:active:before {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+}
 
 
 

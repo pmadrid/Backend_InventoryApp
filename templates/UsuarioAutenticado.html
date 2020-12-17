@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="esp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuario Autenticado</title>
+    <link href="../static/Resources/CSS/mystyle.css" rel="stylesheet" type="text/css">
+    
+    
+</head>
+
+<body>
+    <header>
+        <div class="logedj1">
+            <a href="{{ url_for('menu') }}"><button role = "link1"  class="boton1">Atras</button></a>
+            <p class = "centradoj">
+                <img class = "logoj"  src = "../static/Images/usuario.png" width="50" height="50" >
+                <h2 class = "centradoj usuarioj" >Nombre usuario</h2>
+            </p>
+            <div class="salir-posición">
+                <button class="salir">Salir</button>
+            </div>
+        </div>
+    </header>
+
+    <div class = "usu-aut">
+        <form class="formF2" action="login.html" method="POST">
+            <label for="username"> SISTEMA DE GESTION DE INVENTARIOS  </label>
+            <button type="submit" name="enviar" >Lista de Productos</button>
+            <br /><br />
+            <input id="username" type="text" name="username" placeholder="Nombre del producto">
+            <br /><br />
+        
+            <button type="submit" name="enviar" >Buscar</button>
+        </form>
+
+    </div>
+    
+</body>
+</html>
