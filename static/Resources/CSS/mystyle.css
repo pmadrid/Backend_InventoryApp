@@ -349,8 +349,7 @@ header .salir {
 .pagina-producto img{
     margin-top: 2%;
     max-width: 50%;
-    border-radius: 5px; 
-    box-align: center; 
+    border-radius: 5px;
     border: 2px solid black;
 }
 .pagina-producto{
@@ -403,7 +402,6 @@ header .salir {
     margin-bottom: 2%;
     width: 100px;
     height: 50px;
-    box-align: left;
     border: none;
     border-radius: 10px;
     vertical-align: middle;
