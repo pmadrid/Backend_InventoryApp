@@ -14,36 +14,46 @@
 <body>
     <div class="main-menu m-container">
         <main>
-
             <header>
                 <h1>
-                    Bienvenido al sistema de gestión de inventario</h1>
+                    Bienvenido al sistema de gestión de inventario <button class="salir"><a href="{{ url_for('logout')}}">Cerrar sesión</a></button>
+                </h1>
+
             </header>
 
             <div>
                 <section>
                     <article class="menu-option">
                         <p>Puedes gestionar los usuarios del sistema</p>
-                        <button class="verMas">Gestionar usuarios</button>
+                        <div>
+                            <form method="GET" action="{{url_for('usuarios')}}">
+                                <button class="verMas" type="submit" >Gestionar usuarios</button>
+                            </form>
+                        </div>
                     </article>
                     <article class="menu-option">
                         <p>Puedes ver la lista total de productos</p>
-                        <button class="verMas">Lista de productos</button>
+                        <div>
+                            <form method="GET" action="{{url_for('lista')}}">
+                                <button class="verMas" type="submit">Lista de productos</button>
+                            </form>
+                        </div>
                     </article>
                     <article class="menu-option">
                         <p>Puedes buscar un producto en específico</p>
                         <div>
-                            <input type="text" placeholder="Nombre del producto" />
-                            <button class="verMas">Buscar</button></div>
+                            <form method="GET" action="{{url_for('buscar_producto')}}">
+                                <input type="text" placeholder="Nombre del producto" />
+                                <button class="verMas" type="submit">Buscar</button>
+                            </form>
+                        </div>
                     </article>
                 </section>
             </div>
-
         </main>
-
     </div>
     <footer class="footer">
-        <p>Misión TIC Grupo 2 - Subgrupo B™</br> Todos los derechos reservados</p>
+        <p>Misión TIC Grupo 2 - Subgrupo B™<br> Todos los derechos reservados</p>
     </footer>
 </body>
 

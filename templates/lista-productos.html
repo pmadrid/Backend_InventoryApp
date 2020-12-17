@@ -10,15 +10,14 @@
 <body>
     <header>
         <div class="logedj1">
-            <a href="{{ url_for('menu') }}"><button role = "link1"  class="boton1">Atras</button></a>
-            <p class = "centradoj">
-                <img class = "logoj"  src = "../static/Images/usuario.png" width="50" height="50" >
+            <a href="{{ url_for('menu') }}"><button class="boton1">Atras</button></a>
+            <div class = "centradoj">
+                <img class = "logoj"  src = "../static/Images/usuario.png" alt="Imagen de Usuario">
                 <h2 class = "centradoj usuarioj" >Nombre usuario</h2>
-            </p>
-            <div class="salir-posición">
-                <button class="salir">Salir</button>
             </div>
-
+            <div class="salir-posición">
+                <button class="salir"><a href="{{ url_for('logout')}}">Cerrar sesión</a></button>
+            </div>
         </div>
     </header>
     <main>
@@ -132,7 +131,7 @@
         </section>
     </main>
     <footer class="footer">
-        <p>Misión TIC Grupo 2 - Subgrupo B™</br> Todos los derechos reservados</p>
+        <p>Misión TIC Grupo 2 - Subgrupo B™<br> Todos los derechos reservados</p>
     </footer>
     
 </body>

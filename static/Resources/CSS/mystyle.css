@@ -10,6 +10,12 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
 body {
     background: url(../../Images/pattern.png) no-repeat center/cover;
     padding: 0;
@@ -101,7 +107,6 @@ body::before{
 .main-menu.m-container{
   min-width: 360px;
   max-width: 1280px;
-  background-color: var(--color-principal);
   margin: 3rem auto;
   padding: 1rem;
   background-color: var(--alpha);
@@ -479,6 +484,8 @@ header h1::before{
     
 .logoj{
     padding-bottom: 1px ;
+    width: 50px;
+    height: 50px;
 }
 .usuarioj{
     font-size: small;
