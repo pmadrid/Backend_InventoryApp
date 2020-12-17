@@ -32,7 +32,6 @@ body::before{
   left: 0;
   z-index: -1;
 }   
-/* estilo de la lista */
 
 
 /*inicio*/
@@ -309,7 +308,7 @@ header .salir {
 }
 
 .card img {
-    width: 300px;
+    width: 100%;
     height: 300px;
     object-fit: cover;
     border-radius: 5px;
@@ -546,7 +545,10 @@ header h1::before{
 .informacion-Usuarioj{
     text-align:center;
     width: 100%;
+}
 
+.informacion-Usuarioj h1{
+    margin-bottom: -1%;
 }
 
 label{
@@ -554,17 +556,21 @@ label{
     width: 80px;
   }
 
-
 .inputj{
-    margin-left: 30px;
+    margin-left: 1em;
 }
 
 .espacioj{
-    margin-bottom: 100px;
+    margin-bottom:1em;
 }
 
 .labelj{
     width: 200px;
+}
+
+
+.form-check-input-espacioj{
+    margin: 0;
 }
 
 /*Usuario autenticado*/

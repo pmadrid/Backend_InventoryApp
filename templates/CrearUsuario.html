@@ -25,36 +25,44 @@
         </div>
     </header>
     <main class = "gest-usuariosj">
-    
-   <div class = "informacion-Usuarioj">
-        <header>
-            <h1 class = "titlePagej">Crear Usuario</h1>
-        </header>
-        
-        <br /><br />
-            <label class = "labelj" for="username">Nombre:</label>
-            <input class = "inputj" id="username" type="text" name="username" >
-        
-    </div> 
-    
-    <div class = "informacion-Usuarioj">   
-    
-        <br /><br />
-        <label class = "labelj" for="email">Correo Electrónico:</label>
-        <input class = "inputj" type="email" id="email" name="user_email">
-    
-    </div>  
-    <div class = "informacion-Usuarioj">    
-        
-        <br /><br />
-        <label class = "labelj" for="password">Contraseña:</label>
-        <input class = "inputj espacioj" id="password" type="password" minlength="8" maxlength="10">
-         
-    </div> 
-    <div class = "bottonj">
-        <button role = "link" class="lineaj">Guardar Usuario</button>
-        
-    </div> 
+    <form name="formulario" method="POST" action="{{ url_for('crear_usuario') }}">
+            <div class = "informacion-Usuarioj">
+                    <h1 class = "titlePagej">Crear Usuario</h1>
+                    <br><br><br>
+                    <label class = "labelj" for="username">Nombre:</label>
+                    <input class = "espacioj" id="username" type="text" name="username" >
+            </div>
+            <div class = "informacion-Usuarioj">
+                <label class = "labelj" for="email">Correo Electrónico:</label>
+                <input class = "espacioj" type="email" id="email" name="user_email" >
+            </div>
+            <div class = "informacion-Usuarioj">
+                <label class = "labelj" for="password">Contraseña:</label>
+                <input class = "espacioj" name="password" id="password" type="password" minlength="8" maxlength="10">
+            </div>
+
+            <div class = "informacion-Usuarioj">
+                <p class="selecciona-rol">Selecciona el Rol del Usuario:</p>
+                <div class="form-check">
+                    <input class="form-check-input-espacioj" type="checkbox" value="" id="defaultCheck1" name="admin">
+                    <label class="form-check-label " for="defaultCheck1">
+                        Admin
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input-espacioj" type="checkbox" value="" id="defaultCheck2" name="user">
+                    <label class="form-check-label" for="defaultCheck2">
+                        Usuario
+                    </label>
+                </div>
+            </div>
+
+            <div class = "bottonj">
+                <br>
+                <button role = "link" class="lineaj" type="submit">Guardar Usuario</button>
+
+            </div>
+    </form>
     </main>
     <footer>
         <p class="informacionj">Misión TIC Grupo 2 - Subgrupo B<br> Todos los derechos reservados </p>
