@@ -28,9 +28,9 @@
             <label for="username"> SISTEMA DE GESTION DE INVENTARIOS  </label>
             <button formmethod="get" type="submit" name="enviar"><a href="{{url_for('lista')}}">Lista de productos</a></button>
             <br /><br />
-            <input id="username" type="text" name="username" placeholder="Nombre del producto">
+            <input id="username" type="text" name="username" placeholder="Croissant">
             <br><br>
-            <button type="submit" name="enviar" >Buscar</button>
+            <button formmethod="get" type="submit" name="enviar" ><a href="{{url_for('buscar_producto')}}">Buscar</a></button>
         </form>
 
     </div>
