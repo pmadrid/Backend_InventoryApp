@@ -26,11 +26,10 @@
     <div class = "usu-aut">
         <form class="formF2" action="login.html" method="POST">
             <label for="username"> SISTEMA DE GESTION DE INVENTARIOS  </label>
-            <button type="submit" name="enviar" >Lista de Productos</button>
+            <button formmethod="get" type="submit" name="enviar"><a href="{{url_for('lista')}}">Lista de productos</a></button>
             <br /><br />
             <input id="username" type="text" name="username" placeholder="Nombre del producto">
-            <br /><br />
-        
+            <br><br>
             <button type="submit" name="enviar" >Buscar</button>
         </form>
 
