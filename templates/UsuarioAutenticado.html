@@ -24,13 +24,16 @@
     </header>
 
     <div class = "usu-aut">
-        <form class="formF2" action="login.html" method="POST">
+        <form class="formF2" action="{{url_for('lista')}}" method="GET">
+
             <label for="username"> SISTEMA DE GESTION DE INVENTARIOS  </label>
-            <button formmethod="get" type="submit" name="enviar"><a href="{{url_for('lista')}}">Lista de productos</a></button>
             <br /><br />
+            <button formmethod="get" type="submit" name="enviar">Lista de productos</button>
+        </form>
+        <form class="formF2" action="{{url_for('buscar_producto')}}" method="GET">
             <input id="username" type="text" name="username" placeholder="Croissant">
             <br><br>
-            <button formmethod="get" type="submit" name="enviar" ><a href="{{url_for('buscar_producto')}}">Buscar</a></button>
+            <button formmethod="get" type="submit" name="enviar" >Buscar</button>
         </form>
 
     </div>

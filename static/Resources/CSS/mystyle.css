@@ -593,7 +593,7 @@ label{
 }
 
 .formF2 label{
-	width:300px;
+	width:100%;
     margin-bottom: 2%;
 	font-weight:bolder;
 	display:inline-block;
