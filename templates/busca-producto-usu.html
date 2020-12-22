@@ -3,17 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InventoryApp - Lista de Productos</title>
+    <title>InventoryApp - Búsqueda Producto</title>
     <link href="../static/Resources/CSS/mystyle.css" rel="stylesheet" type="text/css">
     <script src="../static/JS/script.js"></script>
 </head>
 <body>
     <header>
         <div class="logedj1">
-            
-            <a href="{{ url_for('menu')}}"><button class="boton1">Atras</button></a>
-            
-            
+            <a href="{{ url_for('usuario_aut') }}"><button class="boton1">Atras</button></a>
             <div class = "centradoj">
                 <img class = "logoj"  src = "../static/Images/usuario.png" alt="Imagen de Usuario">
                 <h2 class = "centradoj usuarioj" >Nombre usuario</h2>
@@ -23,10 +20,10 @@
             </div>
         </div>
     </header>
-    <main>
-        <!--Lista de productos-->
+    <main class = "gest-usuariosj">
+        <!--Cuando el usuario busca el producto en la barra de búsqueda-->
         <div class="tituloLista">
-            <h1>Lista de productos</h1>
+            <h1>Croissant</h1>
         </div>
         <section class="contenedor-lista">
             <section class="product-list">
@@ -34,101 +31,102 @@
                 <!--Primer Producto-->
                 <div class="card">
                     <div class="title">
-                        Croissants
+                        Croissants la santé
                     </div>
                     <div class="image">
                         <img src="../static/Images/croissant.jpg" alt="">
                     </div>
                     <div class="text">Descripción del producto</div>
-                    <a href="{{ url_for('producto') }}"><button class="verMas">Ver más</button></a>
+                    <button class="verMas"><a href="{{ url_for('producto_usu') }}">Ver más</a></button>
+
                 </div>
                 <!--Segundo producto-->
                 <div class="card">
                     <div class="title">
-                        Café
+                        Croissants la tienda de jairo
                     </div>
                     <div class="image">
-                        <img src="../static/Images/cafe.jpg" alt="">
+                        <img src="../static/Images/croissant.jpg" alt="">
                     </div>
                     <div class="text">Descripción del producto</div>
-                    <a href="{{ url_for('producto') }}"><button class="verMas">Ver más</button></a>
+                    <button class="verMas"><a href="{{ url_for('producto_usu') }}">Ver más</a></button>
                 </div>
                 <!--Tercer producto-->
                 <div class="card">
                     <div class="title">
-                        Arroz con leche
+                        Croissants la tienda del mono
                     </div>
                     <div class="image">
-                        <img src="../static/Images/arrozconleche.jpg" alt="">
+                        <img src="../static/Images/croissant.jpg" alt="">
                     </div>
                     <div class="text">Descripción del producto</div>
-                    <a href="{{ url_for('producto') }}"><button class="verMas">Ver más</button></a>
+                    <button class="verMas"><a href="{{ url_for('producto_usu') }}">Ver más</a></button>
                 </div>
                 <!--Cuarto producto-->
                 <div class="card">
                     <div class="title">
-                        Té chai
+                        Croissants la casa de la abuela
                     </div>
                     <div class="image">
-                        <img src="../static/Images/techai.jpg" alt="">
+                        <img src="../static/Images/croissant.jpg" alt="">
                     </div>
                     <div class="text">Descripción del producto</div>
-                    <a href="{{ url_for('producto') }}"><button class="verMas">Ver más</button></a>
+                    <button class="verMas"><a href="{{ url_for('producto_usu') }}">Ver más</a></button>
                 </div>
                 <!--Quinto producto-->
                 <div class="card">
                     <div class="title">
-                        Empanadas argentinas
+                        Croissants la casa inclinada
                     </div>
                     <div class="image">
-                        <img src="../static/Images/empanadasargentinas.jpg" alt="">
+                        <img src="../static/Images/croissant.jpg" alt="">
                     </div>
                     <div class="text">Descripción del producto</div>
-                    <a href="{{ url_for('producto') }}"><button class="verMas">Ver más</button></a>
+                    <button class="verMas"><a href="{{ url_for('producto_usu') }}">Ver más</a></button>
                 </div>
                 <!--Sexto producto-->
                 <div class="card">
                     <div class="title">
-                        Dedo de queso
+                        Croissants le exquisité
                     </div>
                     <div class="image">
-                        <img src="../static/Images/dedoconqueso.jpg" alt="">
+                        <img src="../static/Images/croissant.jpg" alt="">
                     </div>
                     <div class="text">Descripción del producto</div>
-                    <a href="{{ url_for('producto') }}"><button class="verMas">Ver más</button></a>
+                    <button class="verMas"><a href="{{ url_for('producto_usu') }}">Ver más</a></button>
                 </div>
                 <!--Séptimo producto-->
                 <div class="card">
                     <div class="title">
-                        Pastel de pollo horneado
+                        Croissants bimbo
                     </div>
                     <div class="image">
-                        <img src="../static/Images/pastelpollo.jpg" alt="">
+                        <img src="../static/Images/croissant.jpg" alt="">
                     </div>
                     <div class="text">Descripción del producto</div>
-                    <a href="{{ url_for('producto') }}"><button class="verMas">Ver más</button></a>
+                    <button class="verMas"><a href="{{ url_for('producto_usu') }}">Ver más</a></button>
                 </div>
                 <!--Octavo producto-->
                 <div class="card">
                     <div class="title">
-                        Pandequeso
+                        Croissants mamaInés
                     </div>
                     <div class="image">
-                        <img src="../static/Images/pandebono.jpg" alt="">
+                        <img src="../static/Images/croissant.jpg" alt="">
                     </div>
                     <div class="text">Descripción del producto</div>
-                    <a href="{{ url_for('producto') }}"><button class="verMas">Ver más</button></a>
+                    <button class="verMas"><a href="{{ url_for('producto_usu') }}">Ver más</a></button>
                 </div>
                 <!--Noveno producto-->
                 <div class="card">
                     <div class="title">
-                        Pasteles hawaianos
+                        Croissants Doria
                     </div>
                     <div class="image">
-                        <img src="../static/Images/pastelhawaiano.jpg" alt="">
+                        <img src="../static/Images/croissant.jpg" alt="">
                     </div>
                     <div class="text">Descripción del producto</div>
-                    <a href="{{ url_for('producto') }}"><button class="verMas">Ver más</button></a>
+                    <button class="verMas"><a href="{{ url_for('producto_usu') }}">Ver más</a></button>
                 </div>
             </section>
         </section>
@@ -136,6 +134,5 @@
     <footer class="footer">
         <p>Misión TIC Grupo 2 - Subgrupo B™<br> Todos los derechos reservados</p>
     </footer>
-    
 </body>
 </html>

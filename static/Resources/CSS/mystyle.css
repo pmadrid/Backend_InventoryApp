@@ -517,6 +517,7 @@ header h1::before{
     margin-bottom: 50px;
     margin-right: 200px;
     border: 0;
+    background-color: white;
 }
 
 .bottonj{
@@ -593,7 +594,7 @@ label{
 }
 
 .formF2 label{
-	width:100%;
+	width:300px;
     margin-bottom: 2%;
 	font-weight:bolder;
 	display:inline-block;

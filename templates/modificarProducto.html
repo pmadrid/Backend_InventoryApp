@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="esp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InventoryApp - Modificar Producto</title>
+    <link href="../static/Resources/CSS/mystyle.css" rel="stylesheet" type="text/css">
+    <script src="../static/JS/script.js"></script>
+    
+
+
+</head>
+<body>
+    <header>
+        <div class="logedj1">
+            <a href="{{ url_for('productos') }}"><button class="boton1">Atras</button></a>
+            <div class = "centradoj">
+                <img class = "logoj"  src = "../static/Images/usuario.png" alt="Imagen de Usuario">
+                <h2 class = "centradoj usuarioj" >Nombre usuario</h2>
+            </div>
+            <div class="salir-posición">
+                <button class="salir"><a href="{{ url_for('logout')}}">Cerrar sesión</a></button>
+            </div>
+        </div>
+    </header>
+    <main class = "gest-usuariosj">
+        <form method="POST" action="{{url_for('mod_producto')}}">
+            <div class = "informacion-Usuarioj">
+                <header>
+                    <h1 class = "titlePagej">Modificar Producto</h1>
+                    <br/><br/>
+                </header>
+                    <section class="content">
+                        {% for message in get_flashed_messages()%}
+                            <div class="informacion">
+                                {{ message}}
+                            </div>
+                        {% endfor %}
+                    </section>      
+            </div> 
+            {% if data %}
+
+            <div class = "informacion-Usuarioj">   
+                <br /><br />
+                <label class = "labelj" for="productid">Id Producto:</label>
+                <input class = "espacioj" id="productid" type="text" name="productid" placeholder="{{data[0]}}">
+            </div>  
+
+            <div class = "informacion-Usuarioj">   
+                <label class = "labelj" for="productname">Nombre:</label>
+                <input class = "espacioj" id="productname" type="text" name="productname" placeholder="{{data[1]}}">
+            </div>  
+
+            <div class = "informacion-Usuarioj">
+                <label class = "labelj" for="productcant">Cantidad:</label>
+                <input class = "espacioj" id="productcant" type="text" name="productcant" placeholder="{{ data[2]}}">
+            </div>
+
+            <div class = "informacion-Usuarioj">
+                <label class = "labelj" for="productcost">Costo:</label>
+                <input class = "espacioj" id="productcost" type="text" name="productcost" placeholder="{{ data[3]}}" >
+            </div>
+
+            <div class = "informacion-Usuarioj">
+                <label class = "labelj" for="productdesc">Descripción:</label>
+                <input class = "espacioj" id="productdesc" type="text" name="productdesc" placeholder="{{ data[4]}}" >
+            </div>
+
+            <div class = "informacion-Usuarioj">
+                <label class = "labelj" for="productimg">Imagen:</label>
+                <input class = "espacioj" id="productimg" type="file" name="productimg" placeholder="{{ data[5]}}">
+            </div>
+            {% endif %}
+            
+            <div class = "bottonj">
+                <br /><br />
+                <button type="submit" class="linea">Modificar Producto</button>
+                <button class="linea" type="submit" value="pressed" name="delete_button">Eliminar Producto</button>
+            </div>
+
+        </form> 
+    </main>
+    <footer>
+        <p class="informacionj">Misión TIC Grupo 2 - Subgrupo B<br> Todos los derechos reservados </p>
+    </footer>
+</body>
