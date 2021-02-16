@@ -14,7 +14,7 @@
 <body>
     <header>
         <div class="logedj1">
-            <a href="{{ url_for('menu') }}"><button class="boton1">Atras</button></a>
+            <a href="{{ url_for('usuarios') }}"><button class="boton1">Atras</button></a>
             <div class = "centradoj">
                 <img class = "logoj"  src = "../static/Images/usuario.png" alt="Imagen de Usuario">
                 <h2 class = "centradoj usuarioj" >Nombre usuario</h2>
@@ -25,37 +25,65 @@
         </div>
     </header>
     <main class = "gest-usuariosj">
-    
-   <div class = "informacion-Usuarioj">
-        <header>
-            <h1 class = "titlePagej">Modificar Usuario</h1>
-        </header>
-        
-        <br /><br />
-            <label class = "labelj" for="username">Nombre:</label>
-            <input class = "inputj" id="username" type="text" name="username" >
-        
-    </div> 
-    
-    <div class = "informacion-Usuarioj">   
-    
-        <br /><br />
-        <label class = "labelj" for="email">Correo Electrónico:</label>
-        <input class = "inputj" type="email" id="email" name="user_email">
-    
-    </div>  
-    <div class = "informacion-Usuarioj">    
-        
-        <br /><br />
-        <label class = "labelj" for="password">Contraseña:</label>
-        <input class = "inputj espacioj" id="password" type="password" minlength="8" maxlength="10">
-         
-    </div> 
-    <div class = "bottonj">
-        <button><a href="CrearUsuario.html"  class="linea">Crear Usuario</a></button>
-        <button type="submit" class="linea">Eliminar Usuario</button>
-        
-    </div> 
+        <form method="POST" action="{{url_for('mod_usuario')}}">
+            <div class = "informacion-Usuarioj">
+                <header>
+                    <h1 class = "titlePagej">Modificar Usuario</h1>
+                </header>
+                    <section class="content">
+                        {% for message in get_flashed_messages()%}
+                            <div class="informacion">
+                                {{ message}}
+                            </div>
+                        {% endfor %}
+                    </section>
+                {% if data %}
+                    <br /><br />
+                    <label class = "labelj" for="identificacion">Identificación</label>
+                    <input class = "inputj" id="identificacion" type="text" name="identificacion" placeholder="{{data[0]}}">
+                    <br /><br />
+                    <label class = "labelj" for="username">Nombre:</label>
+                    <input class = "inputj" id="username" type="text" name="username" placeholder="{{data[1]}}" >
+                
+            </div> 
+            
+            <div class = "informacion-Usuarioj">   
+            
+                <br /><br />
+                <label class = "labelj" for="email">Correo Electrónico:</label>
+                <input class = "inputj" type="email" id="email" name="user_email" placeholder="{{data[2]}}">
+            
+            </div>  
+            <div class = "informacion-Usuarioj">    
+                
+                <br /><br />
+                <label class = "labelj" for="password">Contraseña:</label>
+                <input class = "inputj espacioj" name="password" placeholder="{{ data[3]}}" id="password" type="password" minlength="8" maxlength="10">
+                
+            </div>
+            <div class = "informacion-Usuarioj">
+                <p class="selecciona-rol">Selecciona el Rol del Usuario:</p>
+                <div class="form-check">
+                    <input class="form-check-input-espacioj" type="checkbox" value="" id="defaultCheck1" name="admin">
+                    <label class="form-check-label " for="defaultCheck1">
+                        Admin
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input-espacioj" type="checkbox" value="" id="defaultCheck2" name="user">
+                    <label class="form-check-label" for="defaultCheck2">
+                        Usuario
+                    </label>
+                </div>
+            </div>
+            {% endif %}
+            <div class = "bottonj">
+                <br /><br />
+                <button type="submit" class="linea">Modificar Usuario</button>
+                <button class="linea" type="submit" value="pressed" name="delete_button">Eliminar Usuario</button></a>
+                
+            </div>
+        </form> 
     </main>
     <footer>
         <p class="informacionj">Misión TIC Grupo 2 - Subgrupo B<br> Todos los derechos reservados </p>

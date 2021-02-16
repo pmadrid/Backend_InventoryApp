@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="esp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/Resources/CSS/mystyle.css" rel="stylesheet" type="text/css">
+    <script src="../static/JS/script.js"></script>
+
+    <title>InventoryApp - Gestionar Productos</title>
+</head>
+<body>
+    <header>
+        <div class="logedj1">
+            <a href="{{ url_for('menu') }}"><button class="boton1">Atras</button></a>
+            <div class = "centradoj">
+                <img class = "logoj"  src = "../static/Images/usuario.png" alt="Imagen de Usuario">
+                <h2 class = "centradoj usuarioj" >Nombre Usuario</h2>
+            </div>
+            <div class="salir-posición">
+                <button class="salir"><a href="{{ url_for('logout')}}">Cerrar sesión</a></button>
+            </div>
+        </div>
+    </header>
+    <main class = "gest-usuariosj">
+        <header>
+            <h1 class = "titlePagej" >Gestionar Productos</h1>
+        </header>
+    
+        <p class = "listaUsuariosj">
+            Lista de Productos
+        </p>
+
+        <div class = "formj">
+            <table class="cajaj" style="width:70%" >
+                <caption> Tabla en la que se listan los Productos</caption>
+                <tr>
+                  <th scope="col">Id</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Cantidad</th>
+                  <th scope="col">Costo</th>
+                  <th scope="col">Descripción</th>
+                  <th scope="col">Imagen</th>
+                </tr>
+                {% for item in data%}
+                    <tr>
+                        <td>{{item[0]}}</td>
+                        <td>{{item[1]}}</td>
+                        <td>{{item[2]}}</td>
+                        <td>{{item[3]}}</td>
+                        <td>{{item[4]}}</td>
+                        <td><img src="{{item[5]}}" width="60px" height="60px" alt="" ></td>
+                    </tr>
+                {% endfor %}
+              </table>
+
+        </div>
+        <div class = "bottonj">
+            <button class="linea"><a href="{{ url_for('crear_producto') }}">Crear Producto</a></button>
+            <button type="submit" class="linea"><a href="{{ url_for('mod_producto') }}">Modificar Producto</a></button>
+        </div> 
+    </main>
+    <footer>
+        <p class="informacionj">Misión TIC Grupo 2 - Subgrupo B<br> Todos los derechos reservados </p>
+    </footer>
+</body>
+</html>

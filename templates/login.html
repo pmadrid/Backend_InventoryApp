@@ -45,7 +45,9 @@
                     </p>
                     <section class="content">
                         {% for message in get_flashed_messages()%}
-                            <div class="informacion">{{ message}}</div>
+                            <div class="informacion">
+                                {{ message}}
+                            </div>
                         {% endfor %}
                     </section>
                     <p class="message">¿Olvidaste tu contraseña?<a href="#" onclick="toggle()"> Recuperar</a></p>

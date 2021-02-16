@@ -517,6 +517,7 @@ header h1::before{
     margin-bottom: 50px;
     margin-right: 200px;
     border: 0;
+    background-color: white;
 }
 
 .bottonj{

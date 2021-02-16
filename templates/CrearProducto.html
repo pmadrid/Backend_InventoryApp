@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="esp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/Resources/CSS/mystyle.css" rel="stylesheet" type="text/css">
+    <script src="../static/JS/script.js"></script>
+
+    
+    <title>InventoryApp - Crear Producto</title>
+
+</head>
+<body>
+    <header>
+        <div class="logedj1">
+            <a href="{{ url_for('productos') }}"><button class="boton1">Atras</button></a>
+            <div class = "centradoj">
+                <img class = "logoj"  src = "../static/Images/usuario.png" alt="Imagen de Usuario">
+                <h2 class = "centradoj usuarioj" >Nombre usuario</h2>
+            </div>
+            <div class="salir-posición">
+                <button class="salir"><a href="{{ url_for('logout')}}">Cerrar sesión</a></button>
+            </div>
+        </div>
+    </header>
+    <main class = "gest-usuariosj">
+    <form name="formulario" method="POST" action="{{ url_for('crear_producto') }}">
+            <div class = "informacion-Usuarioj">
+                    <h1 class = "titlePagej">Crear Producto</h1>
+                    <br></br>
+                    <label class = "labelj" for="productname">Nombre:</label>
+                    <input class = "espacioj" id="productname" type="text" name="productname" >
+            </div>
+            <div class = "informacion-Usuarioj">
+                <label class = "labelj" for="productcant">Cantidad:</label>
+                <input class = "espacioj" id="productcant" type="text" name="productcant" >
+            </div>
+            <div class = "informacion-Usuarioj">
+                <label class = "labelj" for="productcost">Costo:</label>
+                <input class = "espacioj" id="productcost" type="text" name="productcost" >
+            </div>
+            <div class = "informacion-Usuarioj">
+                <label class = "labelj" for="productdesc">Descripción:</label>
+                <input class = "espacioj" id="productdesc" type="text" name="productdesc" >
+            </div>
+            <div class = "informacion-Usuarioj">
+                <label class = "labelj" for="productimg">Imagen:</label>
+                <input class = "espacioj" id="productimg" type="file" name="productimg" >
+            </div>
+            
+            <section class="content">
+                {% for message in get_flashed_messages()%}
+                    <div class="informacion">
+                        {{ message}}
+                    </div>
+                {% endfor %}
+            </section>
+
+            <div class = "bottonj">
+                <br>
+                <button role = "link" class="lineaj" type="submit">Guardar Producto</button>
+
+            </div>
+    </form>
+    </main>
+    <footer>
+        <p class="informacionj">Misión TIC Grupo 2 - Subgrupo B<br> Todos los derechos reservados </p>
+    </footer>
+</body>
